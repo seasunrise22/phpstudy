@@ -1,6 +1,11 @@
 /* 공통 설정 */
 * { padding: 0; margin: 0; box-sizing: border-box; } 
 ul { list-style-type: none; } 
+a { display: inline-block; text-decoration: none; }
+a:link { text-decoration:none; color: #222222; }
+a:hover { text-decoration:none; color: #222222; }
+a:visited { text-decoration:none; color: #222222; }
+a:active { text-decoration:none; color: #222222; }
 /* 버튼 */
 .buttons { text-align: right; margin: 20px; } 
 .buttons li { display: inline; } 
@@ -21,3 +26,7 @@ h2 { margin-top: 20px; padding: 10px; border-bottom: solid 3px black; }
 .board_list .col1 { width: 10%; }
 .board_list .col2 { width: 50%; text-align: left; }
 .board_list .col3 { width: 15%; }
+/* 게시판 내용보기(view.php) */
+.board_view .row1 { padding: 15px; border-bottom: solid 1px #aaaaaa; }
+.board_view .row2 { padding: 15px 15px 80px 15px; border-bottom: solid 1px #cccccc; }
+.board_view .col2 { float: right;}

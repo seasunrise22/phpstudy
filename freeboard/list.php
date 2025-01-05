@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>목록보기</title>
+    <title>자유 게시판</title>
     <link rel="stylesheet" href="style.css">
     <script>
     </script>
@@ -19,7 +19,6 @@
             <span class="col3">글쓴이</span>
             <span class="col4">등록일</span>
         </li>
-    </ul>    
     <?php
     $con = mysqli_connect("localhost", "user", "12345", "sample");
     $sql = "select * from freeboard order by num desc";
@@ -29,7 +28,7 @@
     $number = $total_record; // 글 번호 매김
     for($i=0; $i<$total_record; $i++) {
         mysqli_data_seek($result, $i); // 레코드 포인터 이동
-        $row = mysqli_fetch_assoc($result); // 레코드 가져오기
+        $row = mysqli_fetch_assoc($result); // 현재 행을 연관 배열로 가져온다.
 
         $num        = $row["num"];          // 레코드 번호
         $name       = $row["name"];         // 이름
@@ -49,6 +48,11 @@
     }
     mysqli_close($con);
     ?>
+    </ul>    
+    <ul class="buttons">
+        <li><button onclick="location.href='list.php'">목록</button></li> <!-- 이거는 필요 없지 않나? -->
+        <li><button onclick="location.href='form.php'">글쓰기</button></li>
+    </ul>
     
 </body>
 
